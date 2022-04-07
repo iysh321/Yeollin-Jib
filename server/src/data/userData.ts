@@ -32,9 +32,7 @@ export class UserData {
 
   async findUserByNickname(nickname: string): Promise<user | null> {
     return user.findOne({
-      where: {
-        nickname: nickname,
-      },
+      where: { nickname: nickname || nickname!.toUpperCase() },
     });
   }
 

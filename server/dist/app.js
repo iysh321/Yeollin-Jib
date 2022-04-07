@@ -54,7 +54,7 @@ const nodemailer_1 = __importDefault(require("nodemailer"));
 const nodemailer_mailgun_transport_1 = __importDefault(require("nodemailer-mailgun-transport"));
 const corsOption = {
     Headers: { "content-type": "application/json" },
-    origin: "*",
+    origin: true,
     credentials: true,
     method: ["post", "get", "put", "patch", "delete", "options"],
 };

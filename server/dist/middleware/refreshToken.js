@@ -56,9 +56,10 @@ const refreshToken = (req, res, next) => __awaiter(void 0, void 0, void 0, funct
             where: { id: decoded.id },
         });
         if (!userInfo) {
-            return res.status(400).json({
+            res.status(400).json({
                 message: "RefreshToken에 해당유저가 없습니다.",
             });
+            return;
         }
         delete userInfo.dataValues.password;
         const payload = userInfo.dataValues;

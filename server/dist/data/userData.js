@@ -50,9 +50,7 @@ let UserData = class UserData {
     findUserByNickname(nickname) {
         return __awaiter(this, void 0, void 0, function* () {
             return user_1.default.findOne({
-                where: {
-                    nickname: nickname,
-                },
+                where: { nickname: nickname || nickname.toUpperCase() },
             });
         });
     }

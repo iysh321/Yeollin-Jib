@@ -32,7 +32,7 @@ let CategoryData = class CategoryData {
     }
     findCategory1Code(category1) {
         return __awaiter(this, void 0, void 0, function* () {
-            return yield category_1.default.findAll({
+            return category_1.default.findAll({
                 where: { category1: category1 },
             });
         });

@@ -94,8 +94,8 @@ let PostData = class PostData {
         return __awaiter(this, void 0, void 0, function* () {
             return post_1.default.findAndCountAll({
                 attributes: ["id", "userId", "title", "address", "dueDate", "imagePath"],
-                limit: 8,
-                offset: offset,
+                // limit: 8,
+                // offset: offset,
                 order: [["id", "DESC"]],
                 distinct: true,
                 where: { userId: userId },

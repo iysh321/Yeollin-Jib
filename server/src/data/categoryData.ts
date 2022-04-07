@@ -14,7 +14,7 @@ export class CategoryData {
   }
 
   async findCategory1Code(category1: number): Promise<category[]> {
-    return await category.findAll({
+    return category.findAll({
       where: { category1: category1 },
     });
   }
